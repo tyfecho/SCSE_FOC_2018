@@ -12,6 +12,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import com.example.tyrone.scse_foc_2018.R;
 
@@ -20,11 +21,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     TextView et_email, et_password;
     Button btn_login, btn_register;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
 
         et_email = (TextView)findViewById(R.id.etEmail);
         et_password = (TextView)findViewById(R.id.etPassword);
@@ -41,6 +44,30 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         });
 
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            public void onClick( View v ) {
+                //hideProgressDialog();
+                Intent intent = new Intent(LoginActivity.this, NewsActivity.class);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+
+    }
+
+    public void initToolBar() {
+        /*toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.titlebar_news);
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_toolbar_arrow);
+        toolbar.setNavigationOnClickListener(
+                new View.OnClickListener() {
+                    public void onClick(View v) {
+                        Toast.makeText(LoginActivity.this,"clicking Toolbar");
+                    }
+                }
+        );*/
     }
 
     @Override

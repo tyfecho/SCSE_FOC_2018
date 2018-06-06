@@ -20,6 +20,7 @@
     <string name="submit">Submit</string>
     <string name="confirm">Confirm</string>
     <!-- Title Strings -->
+    <string name="titlebar_news">News</string>
     <string name="analyse_category">Analyse Category</string>
     <string name="analyse_options">Analyse Options</string>
     <string name="year">Year</string>
