@@ -19,6 +19,10 @@
     <string name="delete_account">Delete Account</string>
     <string name="submit">Submit</string>
     <string name="confirm">Confirm</string>
+    <string name="_import">Import</string>
+    <string name="gallery">Gallery</string>
+    <string name="slideshow">Slideshow</string>
+    <string name="tools">Tools</string>
     <!-- Title Strings -->
     <string name="titlebar_news">News</string>
     <string name="analyse_category">Analyse Category</string>

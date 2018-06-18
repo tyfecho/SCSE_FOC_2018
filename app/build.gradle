@@ -21,14 +21,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
+    implementation 'com.android.support:design:26.+'
     implementation 'com.android.support:appcompat-v7:26.+'
-    implementation 'com.mxn.soul:flowingdrawer-core:2.0.0'
-    implementation 'com.google.firebase:firebase-auth:10.0.1'
-    implementation 'com.google.firebase:firebase-database:10.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.2'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
     testImplementation 'junit:junit:4.12'
 }
 

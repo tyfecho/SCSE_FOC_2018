@@ -10,7 +10,6 @@
 
 
 
-
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
