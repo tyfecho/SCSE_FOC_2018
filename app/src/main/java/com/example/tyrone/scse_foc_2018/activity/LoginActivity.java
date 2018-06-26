@@ -10,17 +10,21 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
 import com.example.tyrone.scse_foc_2018.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends BaseAuthActivity {
 
-    TextView et_email, et_password;
-    Button btn_login, btn_register;
+
     Toolbar toolbar;
 
     @Override
@@ -29,8 +33,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
 
-        et_email = (TextView)findViewById(R.id.etEmail);
-        et_password = (TextView)findViewById(R.id.etPassword);
+        et_email = (EditText)findViewById(R.id.etEmail);
+        et_password = (EditText)findViewById(R.id.etPassword);
         btn_login = (Button) findViewById(R.id.bLogin);
         btn_register = (Button) findViewById(R.id.bRegister);
 
@@ -47,9 +51,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btn_login.setOnClickListener(new View.OnClickListener() {
             public void onClick( View v ) {
                 //hideProgressDialog();
-                Intent intent = new Intent(LoginActivity.this, NewsActivity.class);
-                startActivity(intent);
-                finish();
+                //Intent intent = new Intent(LoginActivity.this, NewsActivity.class);
+                //startActivity(intent);
+                //finish();
+                attemptLogin();
             }
 
         });
@@ -70,7 +75,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         );*/
     }
 
-    @Override
+
     public void onClick(View view) {
     }
         /*setContentView(R.layout.activity_login);
@@ -133,7 +138,37 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * errors are presented and no actual login attempt is made.
      */
     private void attemptLogin() {
+        if (validateLoginForm()) {
+            // Show a progress spinner, and kick off a background task to
+            // perform the user login attempt.
+            showProgressDialog();
 
+            final FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+            mAuth.signInWithEmailAndPassword(et_email.getText().toString(), et_password.getText().toString())
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d((getString(R.string.REGISTERED_TAG)), "login:success");
+                                if (mAuth.getCurrentUser() != null) {
+                                    hideProgressDialog();
+                                    Intent intent = new Intent(LoginActivity.this, NewsActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            } else {
+                                hideProgressDialog();
+                                // If sign in fails, display a message to the user.
+                                Log.w((getString(R.string.REGISTERED_TAG)), "login:failure", task.getException());
+                                // If sign in fails, display a message to the user.
+                                Toast.makeText(LoginActivity.this, "Incorrect Email/Password.",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }
 
     }
 }

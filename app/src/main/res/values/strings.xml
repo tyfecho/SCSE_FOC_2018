@@ -12,6 +12,8 @@
     <string name="settings">Settings</string>
     <string name="about">About</string>
     <string name="logout">Logout</string>
+    <string name="news_updates">News/Updates</string>
+    <string name="score">Score</string>
 
     <!-- Button Strings -->
     <string name="navigate">Navigate</string>
