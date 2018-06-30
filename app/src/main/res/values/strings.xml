@@ -81,16 +81,6 @@
     <string name="error_password_mismatch">Password does not match</string>
     <string name="error_incorrect_old_password">Your old password was entered incorrectly. Unable to perform change of password.</string>
 
-    <string name="prompt_propertyName">Property Name</string>
-    <string name="prompt_description">Description</string>
-    <string name="prompt_postalCode">Postal Code</string>
-    <string name="prompt_propertyType">Property Type</string>
-    <string name="prompt_price">Price</string>
-    <string name="prompt_floorArea">Floor Area</string>
-
-    <string name="action_back">Back</string>
-    <string name="action_done">Done</string>
-    <string name="action_retake">Retake Photo</string>
 
 
     <!-- Action TAGs -->
@@ -100,59 +90,6 @@
     <string name="SKIP_TAG">SKIP_TAG</string>
 
     <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
-
-    <!-- Team Members' Name -->
-    <string name="FQ">Fiqah</string>
-    <string name="GG">GiGi</string>
-    <string name="HYN">Heryani</string>
-    <string name="NHY">Neo Hui Yu</string>
-    <string name="OWQ">Ong WenQi</string>
-    <string name="TY">Tyrone</string>
-
-    <string-array name="propertyType_array">
-        <item>Shophouse</item>
-        <item>Building</item>
-        <item>And?</item>
-        <item>idk</item>
-    </string-array>
-
-    <string-array name="analyseCategory_array">
-        <item>Age &amp; Gender Distribution</item>
-        <item>Economic Status</item>
-        <item>Education Status</item>
-        <item>Ethnic Distribution</item>
-        <item>Household Work Income</item>
-        <item>Household Size</item>
-        <item>Marital Status</item>
-        <item>Occupation</item>
-        <item>Spoken Language</item>
-        <item>Work Income</item>
-    </string-array>
-
-    <string-array name="ageDistributionYear_array">
-        <item>2000</item>
-        <item>2004</item>
-        <item>2008</item>
-        <item>2012</item>
-        <item>2016</item>
-    </string-array>
-
-    <string-array name="economicStatusYear_array">
-        <item>2000</item>
-        <item>2010</item>
-    </string-array>
-
-    <string-array name="ethnicDistributionYear_array">
-        <item>2000</item>
-        <item>2010</item>
-        <item>2015</item>
-    </string-array>
-
-    <string-array name="educationStatusYear_array">
-        <item>2000</item>
-        <item>2010</item>
-        <item>2015</item>
-    </string-array>
 
     <string name="title_activity_detailed_listing_fragment">DetailedListingFragment</string>
     <string name="title_activity_detailed_listing">detailedListing</string>
