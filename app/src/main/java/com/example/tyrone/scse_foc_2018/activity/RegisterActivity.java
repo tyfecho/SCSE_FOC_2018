@@ -73,7 +73,7 @@ public class RegisterActivity extends BaseAuthActivity {
 
         showProgressDialog();
 
-        final Member member = new Member(name, email, password, mobileNo, null);
+        final Member member = new Member(name, email, "Comm_Prog", mobileNo, null);
         final MemberController memberController = new MemberController();
 
         mAuth = FirebaseAuth.getInstance();
