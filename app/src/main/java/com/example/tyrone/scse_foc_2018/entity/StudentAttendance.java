@@ -26,4 +26,5 @@ public class StudentAttendance {
     {
         Present = status;
     }
+    
 }
