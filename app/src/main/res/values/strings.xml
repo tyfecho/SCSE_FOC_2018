@@ -114,41 +114,4 @@
         <item>14:00 - 16:00</item>
         <item>16:00 - 18:00</item>
     </string-array>
-
-    <string-array name="StudentNames">
-        <item>Richard</item>
-        <item>Denise</item>
-        <item>Glendon</item>
-        <item>Sharon</item>
-        <item>Gerald</item>
-        <item>Florence</item>
-        <item>Jeff</item>
-        <item>Jaymin</item>
-        <!--<item>Aaron</item>
-        <item>Candy</item>
-        <item>Bob</item>-->
-    </string-array>
-
-    <string-array name="AdminNumbers">
-        <item>U1622360F</item>
-        <item>U1621360F</item>
-        <item>U1622360F</item>
-        <item>U1622310F</item>
-        <item>U262360F</item>
-        <item>U3422360F</item>
-        <item>U5622360F</item>
-        <item>U7822360F</item>
-        <!--<item>U8922360F</item>
-        <item>U0922360F</item>
-        <item>U1625560F</item>-->
-    </string-array>
-
-    <string-array name="OGs">
-        <item>Apus</item>
-        <item>Corvus</item>
-        <item>Leo</item>
-        <item>Lyra</item>
-        <item>Orion</item>
-        <item>Scorpius</item>
-    </string-array>
 </resources>
