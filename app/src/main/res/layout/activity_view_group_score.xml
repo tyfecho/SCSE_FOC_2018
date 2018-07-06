@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewGroupScoreActivity">
+
+    <TextView
+        android:id="@+id/LeoTextView"
+        android:layout_width="130dp"
+        android:layout_height="68dp"
+        android:layout_alignBottom="@+id/LeoImageView"
+        android:layout_alignStart="@+id/CorvusTextView"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/LyraTextView"
+        android:layout_width="130dp"
+        android:layout_height="68dp"
+        android:layout_alignBottom="@+id/LyraImageView"
+        android:layout_alignStart="@+id/CorvusTextView"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/OrionTextView"
+        android:layout_width="130dp"
+        android:layout_height="68dp"
+        android:layout_alignBottom="@+id/OrionImageView"
+        android:layout_alignStart="@+id/CorvusTextView"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/ScorpiusTextView"
+        android:layout_width="130dp"
+        android:layout_height="68dp"
+        android:layout_alignBottom="@+id/ScorpiusImageView"
+        android:layout_alignStart="@+id/CorvusTextView"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/CorvusImageView"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ApusImageView"
+        app:srcCompat="?attr/actionModeShareDrawable" />
+
+    <ImageView
+        android:id="@+id/LeoImageView"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/CorvusImageView"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageView
+        android:id="@+id/LyraImageView"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/LeoImageView"
+        app:srcCompat="?android:attr/actionModePasteDrawable" />
+
+    <ImageView
+        android:id="@+id/ScorpiusImageView"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/OrionTextView"
+        app:srcCompat="?android:attr/actionModeCutDrawable" />
+
+    <ImageView
+        android:id="@+id/OrionImageView"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/LyraImageView"
+        app:srcCompat="?android:attr/actionModeFindDrawable" />
+
+    <ImageView
+        android:id="@+id/ApusImageView"
+        android:layout_width="181dp"
+        android:layout_height="82dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+    <TextView
+        android:id="@+id/CorvusTextView"
+        android:layout_width="130dp"
+        android:layout_height="68dp"
+        android:layout_alignBottom="@+id/CorvusImageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/ApusTextView"
+        android:layout_width="130dp"
+        android:layout_height="68dp"
+        android:layout_above="@+id/CorvusImageView"
+        android:layout_alignStart="@+id/LeoTextView"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+</RelativeLayout>
