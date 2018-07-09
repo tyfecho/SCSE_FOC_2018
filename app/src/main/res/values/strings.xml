@@ -13,7 +13,8 @@
     <string name="about">About</string>
     <string name="logout">Logout</string>
     <string name="news_updates">News/Updates</string>
-    <string name="score">Score</string>
+    <string name="view_score">View Score</string>
+    <string name="edit_score">Edit Score</string>
 
     <!-- Button Strings -->
     <string name="navigate">Navigate</string>

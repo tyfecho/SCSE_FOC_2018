@@ -23,25 +23,39 @@
         <activity android:name=".activity.RegisterActivity" />
         <activity
             android:name=".activity.NewsActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" >
+
+
+         </activity>
+
         <activity
             android:name=".activity.TrReportActivity"
             android:allowBackup="true"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.GLAttendanceActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" />
 
-        </activity>
         <activity
-            android:name=".ViewGroupScoreActivity"
+            android:name=".activity.ViewGroupScoreActivity"
             android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.EditGroupScoreActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity android:name=".activity.UpdateNewsActivity"
+            android:theme="@style/AppTheme"/>
+
+
+
     </application>
 
 </manifest>

@@ -5,21 +5,27 @@
     <group android:checkableBehavior="single"
         android:layout_width="wrap_content">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/Updates"
 
             android:title="@string/news_updates" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/Score"
 
-            android:title="@string/score" />
+            android:title="@string/view_score" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/EditScore"
+
+            android:title="@string/edit_score" />
+        <item
+            android:id="@+id/Account"
 
             android:title="@string/account" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/Logout"
 
             android:title="@string/logout" />
+
+
 
 
     </group>

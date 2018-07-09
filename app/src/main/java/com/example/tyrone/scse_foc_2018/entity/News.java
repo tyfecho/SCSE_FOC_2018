@@ -3,12 +3,12 @@ package com.example.tyrone.scse_foc_2018.entity;
 public class News {
     private String title, author, datetime, content;
 
-    public News(String inTitle, String inAuthor, String inDateline, String inContext)
+    public News(String inTitle, String inAuthor, String inDateline, String inContent)
     {
         title = inTitle;
         author = inAuthor;
         datetime = inDateline;
-        content = inContext;
+        content = inContent;
 
     }
     //  Get Values

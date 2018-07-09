@@ -34,6 +34,7 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
     public DrawerLayout mDrawerLayout;
     public Toolbar toolbar;
 
+    SharedPreferences sharedPref;
 
     String KeyMessage =  "Message No ";
     String KeyCurrentMessageIndex = "key";
@@ -51,7 +52,7 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
         initToolBar();
         initDrawer();
 
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        sharedPref = this.getSharedPreferences("News", Context.MODE_PRIVATE);
         CurrentMessageIndex = sharedPref.getInt(KeyCurrentMessageIndex, 0);
 
         myListView = (ListView) findViewById(R.id.BroadcastListView);
@@ -136,9 +137,6 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
 
     public void Refresh(View view)
     {
-        Log.i("asd", "coming into the refresh");
-
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
 
         itemAdapter.notifyDataSetChanged();
 
@@ -147,11 +145,6 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
         if(CurrentMessageIndex > 0)
             message = sharedPref.getString(KeyMessage + CurrentMessageIndex, "default");
 
-
-        Log.i("asd", "getting key is = " + KeyMessage + CurrentMessageIndex);
-
-        //TextView preview = (TextView) findViewById(R.id.message1);
-        //preview.setText(CurrentMessageIndex);
     }
     public void Reset(View view)
     {
